@@ -6,8 +6,8 @@ export const Work = [
         name: "Candle Decor",
         description: "A freelance project where I developed an e-commerce website for candles. This platform allows users to browse and purchase a variety of candle products with ease.",
         tags: ["React", "Node.js", "Tailwind CSS", "MongoDB"],
-        visit: "https://skpdecor.co.in/",
-        github: "https://github.com/junaid77khan/ecom"
+        visit: "https://candle-decor.vercel.app",
+        github: "https://github.com/junaid77khan/Candle-Decor"
     },
     {
         id: 2,
@@ -19,11 +19,11 @@ export const Work = [
     },
     {
         id: 3,
-        name: "Spotify Clone",
-        description: "A frontend project where I replicated the Spotify interface to practice and enhance my skills in HTML, CSS, and JavaScript.",
-        tags: ["HTML", "CSS", "JavaScript"],
-        visit: "https://junaid77khan.github.io/Spotify_Clone/",
-        github: "https://github.com/junaid77khan/Spotify_Clone"
+        name: "Group-Chatly",
+        description: "A Full Stack Application I created a chatroom with the help of socket IO, React, Node, MongoDB and server is deployed on AWS for seamless experience",
+        tags: ["React", "Node", "MongoDB", "Docker", "AWS"],
+        visit: "https://group-chatly.vercel.app/login",
+        github: "https://github.com/junaid77khan/group-chatly"
     }
     
 ];

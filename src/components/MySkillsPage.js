@@ -95,13 +95,13 @@ const MySkillsPage = () => {
           <Description>
             <strong>Skills</strong>
             <p>
-            Js, React, Redux, Tailwind, NodeJs, ExpressJs, MongoDB etc.
+            Javascript, React, Redux, Tailwind, NodeJs, ExpressJs, MongoDB, JAVA, PHP
             </p>
           </Description>
           <Description>
             <strong>Tools</strong>
             <p>
-            VScode, Github, Git etc.
+            Docker, Kubernetes, AWS, VScode, Github, Git.
             </p>
           </Description>
         </Main>

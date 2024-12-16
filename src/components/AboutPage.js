@@ -73,7 +73,7 @@ const AboutPage = () => {
             <img src={profile} alt="spaceman" />
         </Spaceman>     */}
         <Main>
-        I'm a skilled MERN Stack Developer with a passion for creating dynamic and user-friendly websites.
+        I'm a skilled Full Stack Developer with a passion for creating dynamic and user-friendly websites.
         <br /> <br/>
         As an independent freelancer, I have honed my ability to work autonomously while delivering high-quality results. I excel in problem-solving, leveraging my strong analytical and creative thinking skills to tackle complex challenges.
         <br/> <br/>
