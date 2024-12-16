@@ -15,6 +15,7 @@ const MainContainer = styled.div`
   height: 100vh;
   overflow: hidden;
   position: relative;
+  padding-top: 60px;
 
   h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
@@ -116,11 +117,6 @@ const WorkPage = () => {
             <Card key={d.id} data={d} />
           ))}
         </Main>
-
-        <BottomBar>
-          <ABOUT href="/about">About Me</ABOUT>
-          <SKILLS href="/skills">My Skills</SKILLS>
-        </BottomBar>
       </Container>
     </MainContainer>
   );

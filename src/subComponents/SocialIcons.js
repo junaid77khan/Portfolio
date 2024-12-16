@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
-// import { NavLink } from 'react-router-dom'
 import styled from "styled-components";
-import { Facebook, Github, Twitter, YouTube } from "../components/AllSvgs";
+import { Facebook, Github, Twitter } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
 
 const Icons = styled.div`
@@ -19,6 +18,14 @@ const Icons = styled.div`
   & > *:not(:last-child) {
     margin: 0.5rem 0;
   }
+
+  @media (max-width: 768px) {
+    left: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    left: 0.5rem;
+  }
 `;
 
 const Line = styled(motion.span)`
@@ -26,13 +33,21 @@ const Line = styled(motion.span)`
   height: 8rem;
   background-color: ${(props) =>
     props.color === "dark" ? DarkTheme.text : DarkTheme.body};
+
+  @media (max-width: 768px) {
+    height: 6rem;
+  }
+
+  @media (max-width: 480px) {
+    height: 5rem;
+  }
 `;
 
 const SocialIcons = (props) => {
   return (
     <Icons>
       <motion.div
-        initial={{scale:0 }}
+        initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1 }}
       >
@@ -49,7 +64,7 @@ const SocialIcons = (props) => {
         </a>
       </motion.div>
       <motion.div
-        initial={{scale:0 }}
+        initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1.2 }}
       >
@@ -66,7 +81,7 @@ const SocialIcons = (props) => {
         </a>
       </motion.div>
       <motion.div
-        initial={{scale:0 }}
+        initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1.4 }}
       >
@@ -82,24 +97,6 @@ const SocialIcons = (props) => {
           />
         </a>
       </motion.div>
-      {/* <motion.div
-        initial={{scale:0 }}
-        animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1.6 }}
-      >
-        <a
-          style={{ color: "inherit" }}
-          target="_blank"
-          href={"https://youtube.com"}
-        >
-          <YouTube
-            width={25}
-            height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
-          />
-        </a>
-      </motion.div> */}
-
       <Line
         color={props.theme}
         initial={{
