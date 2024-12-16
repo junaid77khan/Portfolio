@@ -1,6 +1,5 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
-import { DarkTheme } from "./Themes";
+import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 
 import LogoComponent from "../subComponents/LogoComponent";
@@ -9,33 +8,83 @@ import PowerButton from "../subComponents/PowerButton";
 
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
-import BigTitlte from "../subComponents/BigTitlte";
 
-const Box = styled.div`
-  background-color: ${(props) => props.theme.body};
-  min-height: 100vh;
+const MainContainer = styled.div`
+  background: linear-gradient(135deg, #ff9a8b, #fad0c4, #fbc2eb);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-x: hidden;
 
-  @media (max-width: 768px) {
-    padding: 1rem;
+  h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   }
 `;
 
+const Container = styled.div`
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 2rem;
+`;
+
 const Main = styled(motion.div)`
-  width: 70%;
-  margin: 5rem auto;
+  width: 80%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 
   @media (max-width: 768px) {
     width: 90%;
-    margin: 2rem auto;
     gap: 1.5rem;
+  }
+`;
+
+const Contact = styled.a`
+  color: #fff;
+  position: absolute;
+  top: 2rem;
+  right: calc(1rem + 2vw);
+  text-decoration: none;
+  z-index: 1;
+  font-size: 1.2rem;
+
+  &:hover {
+    text-decoration: underline;
+    color: #ff6f91;
+  }
+`;
+
+const BottomBar = styled.div`
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+`;
+
+const ABOUT = styled.a`
+  color: #fff;
+  text-decoration: none;
+  z-index: 1;
+
+  &:hover {
+    color: #ff6f91;
+  }
+`;
+
+const SKILLS = styled.a`
+  color: #fff;
+  text-decoration: none;
+  z-index: 1;
+
+  &:hover {
+    color: #ff6f91;
   }
 `;
 
@@ -50,24 +99,17 @@ const container = {
   },
 };
 
-const BigTitleWrapper = styled.div`
-  position: absolute;
-  top: 5%;
-  right: 10%;
-
-  @media (max-width: 768px) {
-    right: 5%;
-    font-size: 1.8rem;
-  }
-`;
-
 const WorkPage = () => {
   return (
-    <ThemeProvider theme={DarkTheme}>
-      <Box>
-        <LogoComponent theme="dark" />
-        <SocialIcons theme="dark" />
+    <MainContainer>
+      <Container>
         <PowerButton />
+        <LogoComponent theme="light" />
+        <SocialIcons theme="light" />
+
+        <Contact href="mailto:junaidk8185@gmail.com" target="_blank">
+          Say Hello!
+        </Contact>
 
         <Main variants={container} initial="hidden" animate="show">
           {Work.map((d) => (
@@ -75,11 +117,12 @@ const WorkPage = () => {
           ))}
         </Main>
 
-        <BigTitleWrapper>
-          <BigTitlte text="WORK" />
-        </BigTitleWrapper>
-      </Box>
-    </ThemeProvider>
+        <BottomBar>
+          <ABOUT href="/about">About Me</ABOUT>
+          <SKILLS href="/skills">My Skills</SKILLS>
+        </BottomBar>
+      </Container>
+    </MainContainer>
   );
 };
 

@@ -24,6 +24,12 @@ export const Work = [
         tags: ["React", "Node", "MongoDB", "Docker", "AWS"],
         visit: "https://group-chatly.vercel.app/login",
         github: "https://github.com/junaid77khan/group-chatly"
-    }
-    
+    },
+    {
+        id: 3,
+        name: "Trading Application",
+        description: "Contributed in trading application built using PHP, MySql. I designed whole structure, withdrawal money request, bank account setup and all basic requirement of this application",
+        tags: ["PHP", "MySql"],
+        visit: "https://reliancesecurities.org/register.php"
+    }    
 ];

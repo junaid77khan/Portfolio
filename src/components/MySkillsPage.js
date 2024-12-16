@@ -10,7 +10,7 @@ import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitlte'
 
 const Box = styled.div`
-  background-color: ${props => props.theme.body};
+  background: linear-gradient(135deg, #ff9a8b, #fad0c4, #fbc2eb);
   width: 100vw;
   height: 100vh;
   position: relative;

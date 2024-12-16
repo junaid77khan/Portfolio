@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Me from '../assets/Images/profile-2.png';
 
-// Define responsive heights for different screen sizes
 const responsiveHeight = {
   default: '55vh',
   small: '40vh',
@@ -15,20 +14,21 @@ const Box = styled(motion.div)`
   top: 50%;
   transform: translate(-50%, -50%);
   width: 65vw;
-  height: ${({ isSmallScreen }) => (isSmallScreen ? responsiveHeight.small : responsiveHeight.default)};
+  height: ${({ isSmallScreen }) =>
+    isSmallScreen ? responsiveHeight.small : responsiveHeight.default};
   display: flex;
   background: linear-gradient(
       to right,
-      ${props => props.theme.body} 50%,
-      ${props => props.theme.text} 50%) bottom,
+      white 50%,
+      white 50%) bottom,
       linear-gradient(
       to right,
-      ${props => props.theme.body} 50%,
-      ${props => props.theme.text} 50%) top;
+      white 50%,
+      white 50%) top;
   background-repeat: no-repeat;
   background-size: 100% 2px;
-  border-left: 2px solid ${props => props.theme.body};
-  border-right: 2px solid ${props => props.theme.text};
+  border-left: 2px solid white;
+  border-right: 2px solid white;
   z-index: 1;
 `;
 
