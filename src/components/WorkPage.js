@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { DarkTheme } from "./Themes";
 import { motion } from "framer-motion";
@@ -19,15 +19,24 @@ const Box = styled.div`
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 const Main = styled(motion.div)`
   width: 70%;
   margin: 5rem auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: 2rem auto;
+    gap: 1.5rem;
+  }
 `;
 
 const container = {
@@ -40,6 +49,17 @@ const container = {
     },
   },
 };
+
+const BigTitleWrapper = styled.div`
+  position: absolute;
+  top: 5%;
+  right: 10%;
+
+  @media (max-width: 768px) {
+    right: 5%;
+    font-size: 1.8rem;
+  }
+`;
 
 const WorkPage = () => {
   return (
@@ -55,7 +75,9 @@ const WorkPage = () => {
           ))}
         </Main>
 
-        <BigTitlte text="WORK" top="5%" right="10%" />
+        <BigTitleWrapper>
+          <BigTitlte text="WORK" />
+        </BigTitleWrapper>
       </Box>
     </ThemeProvider>
   );
