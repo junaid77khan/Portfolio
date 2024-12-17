@@ -12,6 +12,9 @@ const MainContainer = styled.div`
   overflow: hidden;
   position: relative;
   padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
