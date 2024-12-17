@@ -35,8 +35,8 @@ img{
 }
 `
 const Main =  styled.div`
-  border: 2px solid ${(props) => props.theme.text};
-  color: ${(props) => props.theme.text};
+  border: 2px solid black;
+  color: black;
   padding: 2rem;
   width: 50vw;
   height: 60vh;
@@ -54,6 +54,11 @@ const Main =  styled.div`
   transform: translate(-50%, -50%);
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
+
+  &:hover {
+    color: white;
+    background: black;
+  }
 `
 
 

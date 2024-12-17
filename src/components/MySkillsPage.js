@@ -20,9 +20,9 @@ const Box = styled.div`
 `;
 
 const Main = styled.div`
-  border: 2px solid ${props => props.theme.text};
-  color: ${props => props.theme.text};
-  background-color: ${props => props.theme.body};
+  border: 2px solid black;
+  color: black;
+  background: linear-gradient(135deg, #ff9a8b, #fad0c4, #fbc2eb);
   padding: 2rem;
   width: 50%;
   height: 60%;
@@ -36,8 +36,8 @@ const Main = styled.div`
   justify-content: space-between;
 
   &:hover {
-    color: ${props => props.theme.body};
-    background-color: ${props => props.theme.text};
+    color: white;
+    background: black;
   }
 `;
 
