@@ -145,6 +145,17 @@ const pulse = keyframes`
   }
 `;
 
+const CERTIFICATE = styled(NavLink)`
+  color: #fff;
+  text-decoration: none;
+  z-index: 1;
+
+  &:hover {
+    color: #ff6f91;
+  }
+`;
+
+
 // Main Component
 const Main = () => {
   const [click, setClick] = useState(false);
@@ -179,6 +190,9 @@ const Main = () => {
           <SKILLS to="/skills">
             My Skills
           </SKILLS>
+          <CERTIFICATE to="/certificates">
+            Certificates
+          </CERTIFICATE>
         </BottomBar>
       </Container>
       {click && <Intro />}

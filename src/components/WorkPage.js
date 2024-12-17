@@ -12,7 +12,7 @@ import Card from "../subComponents/Card";
 const MainContainer = styled.div`
   background: linear-gradient(135deg, #ff9a8b, #fad0c4, #fbc2eb);
   width: 100vw;
-  height: 100vh;
+  height: full
   overflow: hidden;
   position: relative;
   padding-top: 60px;

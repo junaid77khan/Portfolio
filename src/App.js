@@ -10,7 +10,7 @@ import AboutPage from "./components/AboutPage";
 import BlogPage from "./components/BlogPage";
 import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
-import SoundBar from "./subComponents/SoundBar";
+import Certificate from "./components/Certificate";
 
 function App() {
   const location = useLocation();
@@ -31,6 +31,8 @@ function App() {
 
             <Route path="/" element={<Main />} />
 
+            <Route path="/certificates" element={<Certificate />} />
+            
             <Route path="/about" element={<AboutPage />} />
 
             <Route path="/blog" element={<BlogPage />} />
